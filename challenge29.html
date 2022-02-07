@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basic Challenges: Challenge 29</title>
+    <style>
+      body { height: 3000px; }
+      .one { background-color: beige; transition: all 3s; }
+      .two { background-color: blueviolet; transition: all 3s; }
+      .three { background-color: coral; transition: all 3s; }
+      .four { background-color: cornflowerblue; transition: all 3s; }
+      .five { background-color: darkgoldenrod; transition: all 3s; }
+    </style>
+  </head>
+  <body class="one">
+    <h1>JavaScript Basic Challenges:</h1>
+    <h2>Challenge 29</h2>
+
+    <p>Scroll Down!</p>
+
+    <script>
+
+      let bodyElem = document.querySelector('body');
+      let scroll;
+
+      console.log(bodyElem);
+
+      window.addEventListener('scroll', () => {
+
+        scroll = window.scrollY;
+        
+        switch (true){
+          case scroll<500: bodyElem.className='one'; break;
+          case scroll<1000: bodyElem.className='two'; break;
+          case scroll<1500: bodyElem.className='three'; break;
+          case scroll<2000: bodyElem.className='four'; break;
+          default: bodyElem.className='five';
+        }
+      });
+        
+    </script>
+  </body>
+</html>

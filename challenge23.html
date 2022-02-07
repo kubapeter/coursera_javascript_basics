@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basic Challenges: Challenge 23</title>
+  </head>
+  <body>
+    <h1>JavaScript Basic Challenges:</h1>
+    <h2>Challenge 23</h2>
+
+    <p>Here is a paragraph of text!</p>
+    <p>Here is another paragraph of text!</p>
+    <p>And another one!</p>
+    <button>Click to turn green!</button>
+
+    <script>
+      
+      let button = document.querySelector('button');
+      let ps = document.querySelectorAll('p');
+
+      button.addEventListener('click', () => {
+        for( p of ps ){
+          p.style.color = 'green';
+        }
+      })
+      
+    </script>
+  </body>
+</html>

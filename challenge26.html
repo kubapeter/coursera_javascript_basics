@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basic Challenges: Challenge 26</title>
+  </head>
+  <body>
+    <h1>JavaScript Basic Challenges:</h1>
+    <h2>Challenge 26</h2>
+
+    <button>Click to add paragraphs!</button>
+    <button>Click to remove last paragraph!</button>
+    <div>
+      <p>This is paragraph number 1</p>
+    </div>
+
+    <script>
+      
+      let buttonAdd = document.querySelectorAll('button')[0];
+      let buttonRemove = document.querySelectorAll('button')[1];
+      let div = document.querySelector('div');
+      let i = 1;
+
+      buttonAdd.addEventListener('click', () => {
+        i++;
+        addP = document.createElement('p');
+        addP.innerText = `This is paragraph number ${i}`;
+        div.appendChild(addP);
+      })
+
+      buttonRemove.addEventListener('click', () => {
+        if(i > 1){
+          i--;
+          let p = document.querySelectorAll('p');
+          let lastP = p[p.length-1];
+          div.removeChild(lastP);
+        }
+        else{
+          alert('This is the last paragraph!')
+        }
+      })
+      
+    </script>
+  </body>
+</html>

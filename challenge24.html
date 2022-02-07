@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basic Challenges: Challenge 24</title>
+  </head>
+  <body>
+    <h1>JavaScript Basic Challenges:</h1>
+    <h2>Challenge 24</h2>
+
+    <button>Click to add paragraphs!</button>
+    <div>
+      <p>Here is a paragraph of text!</p>
+    </div>
+
+    <script>
+      
+      let button = document.querySelector('button');
+      let div = document.querySelector('div');
+
+      button.addEventListener('click', () => {
+        addP = document.createElement('p');
+        addP.innerText = 'Here is another paragraph of text!';
+        div.appendChild(addP);
+      })
+      
+    </script>
+  </body>
+</html>
