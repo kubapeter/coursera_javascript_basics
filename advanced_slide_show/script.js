@@ -26,11 +26,11 @@
   });
 
   function swapImage(e){
-    let newSlide = document.createElement('img');
+    const newSlide = document.createElement('img');
     newSlide.src = `slides/${myPhotos[currentImage]}`;
     newSlide.className = 'fadeinimg';
 
-    let previousSlide = document.querySelector('img');
+    const previousSlide = document.querySelector('img');
 
     content.appendChild(newSlide);
     content.removeChild(previousSlide);
